@@ -9,7 +9,7 @@ function addGrid(size) {
 }
 
 function addBlockRow(size) {
-  const sizeValue = 75 / size;
+  const sizeValue = 60 / size;
 
   const newRow = document.createElement("div");
   newRow.setAttribute("class", "row");
@@ -19,12 +19,17 @@ function addBlockRow(size) {
     newSquare.setAttribute("class", "square");
     newSquare.style.minHeight = `${sizeValue}vh`
     newSquare.style.minWidth = `${sizeValue}vh`
+    newSquare.addEventListener("mouseover", changeColor)
     newRow.appendChild(newSquare);
   }
 
   main.appendChild(newRow);
 }
 
-function changeColor(element) {
-  
+function changeColor(e) {
+  if (e.target.style.backgroundColor == "black") {
+    e.target.style.backgroundColor = "white"
+  } else {
+    e.target.style.backgroundColor = "black"
+  }
 }
