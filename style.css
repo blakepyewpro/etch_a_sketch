@@ -28,6 +28,25 @@ body {
   margin: 0px;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+input, button {
+  background-color: var(--cl-color);
+  color: var(--fg-color);
+  border: 1px solid var(--fg-color);
+  border-radius: 4px;
+}
+
+button:hover {
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
 main {
   background-color: var(--cl-color);
   display: flex;
